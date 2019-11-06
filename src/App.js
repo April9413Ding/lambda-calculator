@@ -36,9 +36,12 @@ function App() {
     if(operator === "="){
       setDisplayValue(
         operatorMethod[CurrentOperat](CurrentValue,DisplayValue)
-      )
+      );
+      setCurrentValue(
+        operatorMethod[CurrentOperat](CurrentValue,DisplayValue)
+      );
     }else{
-    setCurrentValue(CurrentValue + DisplayValue);
+    setCurrentValue(DisplayValue);
     setCurrentOperat(operator);}
   }
 

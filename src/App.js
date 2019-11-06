@@ -21,8 +21,9 @@ function App() {
   const [DisplayValue,setDisplayValue] = useState(0);
   const [CurrentValue,setCurrentValue] = useState(0);
 
-  function numDisplay (num){
-    return setDisplayValue(num);
+  const numDisplay = (num)=>{
+    setDisplayValue(num);
+    
   }
 
   return (
@@ -35,7 +36,7 @@ function App() {
         <div className="all-btn">
           <div className="left-btns">
           <Specials />
-          <Numbers fun={numDisplay}/>
+          <Numbers numFunction={numDisplay}/>
           </div>
 
           <div className="right-btns">

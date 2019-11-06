@@ -8,7 +8,7 @@ import NumberButton from "../NumberButtons/NumberButton";
 
 //Import your array data to from the provided data file
 
-const Numbers = () => {
+const Numbers = ({numFunction}) => {
   // STEP 2 - add the imported data to state
   const [Num,setNum] = useState(numbers);
   return (
@@ -19,8 +19,8 @@ const Numbers = () => {
        }
 
       {Num.map((item,index)=>{
-        if(item == "0"){return (<NumberButton key= {index} char={item} style="num-btn-zero" />)}
-        else{return (<NumberButton key= {index} char={item} style="num-btn" />)}
+        if(item == "0"){return (<NumberButton key= {index} char={item} style="num-btn-zero" numFunction={numFunction}/>)}
+        else{return (<NumberButton key= {index} char={item} style="num-btn" numFunction={numFunction}/>)}
         
       })}
 

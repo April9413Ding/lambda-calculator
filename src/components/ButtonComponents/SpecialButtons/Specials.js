@@ -6,7 +6,7 @@ import {specials} from "../../../data";
 
 //Import your array data to from the provided data file
 
-const Specials = () => {
+const Specials = ({numFunction}) => {
   // STEP 2 - add the imported data to state
   const [Spec,setSpec] = useState(specials);
   return (
@@ -16,7 +16,7 @@ const Specials = () => {
        it any props needed by the child component*/
        
        Spec.map((item,index)=>(
-         <SpecialButton key = {index} char ={item} />
+         <SpecialButton key = {index} char ={item} numFunction={numFunction}/>
        ))
 
        }

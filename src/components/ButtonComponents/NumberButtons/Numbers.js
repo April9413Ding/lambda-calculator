@@ -19,8 +19,8 @@ const Numbers = ({numFunction}) => {
        }
 
       {Num.map((item,index)=>{
-        if(item == "0"){return (<NumberButton key= {index} char={item} style="num-btn-zero" numFunction={numFunction}/>)}
-        else{return (<NumberButton key= {index} char={item} style="num-btn" numFunction={numFunction}/>)}
+        if(item === "0"){return (<NumberButton key= {index} char={item} style={"num-btn-zero"} numFunction={numFunction}/>)}
+        else{return (<NumberButton key= {index} char={item} style={"num-btn"} numFunction={numFunction}/>)}
         
       })}
 
